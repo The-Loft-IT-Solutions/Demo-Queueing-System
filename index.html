@@ -14,15 +14,15 @@
     <p style="color:#CBD5E1;margin-bottom:36px;text-align:center;max-width:560px;">A queue management system with a self-service kiosk and public display for customers, plus a full admin dashboard for staff. Choose a view to begin.</p>
     <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;max-width:920px;">
       <div onclick="dcwEnter('dashboard')" style="background:#fff;color:#0F172A;border-radius:14px;padding:24px;width:260px;cursor:pointer;transition:.2s;border:2px solid transparent;" onmouseover="this.style.borderColor='#38BDF8'" onmouseout="this.style.borderColor='transparent'">
-        <h3 style="font-size:18px;margin-bottom:8px;color:#0369A1;">&#128202; Admin Dashboard</h3>
+        <h3 style="font-size:18px;margin-bottom:8px;color:#0369A1;display:flex;align-items:center;gap:8px;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg> Admin Dashboard</h3>
         <p style="font-size:13.5px;color:#64748B;">Staff-facing view: tickets, counters, live feed, analytics, and settings.</p>
       </div>
       <div onclick="dcwEnter('kiosk')" style="background:#fff;color:#0F172A;border-radius:14px;padding:24px;width:260px;cursor:pointer;transition:.2s;border:2px solid transparent;" onmouseover="this.style.borderColor='#38BDF8'" onmouseout="this.style.borderColor='transparent'">
-        <h3 style="font-size:18px;margin-bottom:8px;color:#0369A1;">&#128241; Kiosk Terminal</h3>
+        <h3 style="font-size:18px;margin-bottom:8px;color:#0369A1;display:flex;align-items:center;gap:8px;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg> Kiosk Terminal</h3>
         <p style="font-size:13.5px;color:#64748B;">What a customer sees at a self-service kiosk to take a ticket. Opens in a new tab (real kiosks are a separate device).</p>
       </div>
       <div onclick="dcwEnter('display')" style="background:#fff;color:#0F172A;border-radius:14px;padding:24px;width:260px;cursor:pointer;transition:.2s;border:2px solid transparent;" onmouseover="this.style.borderColor='#38BDF8'" onmouseout="this.style.borderColor='transparent'">
-        <h3 style="font-size:18px;margin-bottom:8px;color:#0369A1;">&#128250; Public Display</h3>
+        <h3 style="font-size:18px;margin-bottom:8px;color:#0369A1;display:flex;align-items:center;gap:8px;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Public Display</h3>
         <p style="font-size:13.5px;color:#64748B;">The "Now Serving" screen customers see in the waiting area. Opens in a new tab (real displays run on a separate screen).</p>
       </div>
     </div>
@@ -66,16 +66,16 @@
       <div class="nav-section">
         <div class="nav-section-title">Main</div>
         <a href="index.html" class="nav-item active">
-          <span class="icon">&#128202;</span>
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
           <span>Dashboard</span>
         </a>
         <a href="assets/html/tickets.html" class="nav-item">
-          <span class="icon">&#127915;</span>
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41L11 3H4v7l9.59 9.59a2 2 0 0 0 2.82 0l4.18-4.18a2 2 0 0 0 0-2.82Z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span>
           <span>Tickets</span>
           <span class="nav-badge" id="nav-total-tickets">0</span>
         </a>
         <a href="assets/html/counters.html" class="nav-item">
-          <span class="icon">&#128187;</span>
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
           <span>Counters</span>
           <span class="nav-badge" id="nav-active-counters">0</span>
         </a>
@@ -83,15 +83,15 @@
       <div class="nav-section">
         <div class="nav-section-title">Operations</div>
         <a href="assets/html/kiosk.html" class="nav-item" target="_blank">
-          <span class="icon">&#128241;</span>
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span>
           <span>Kiosk Terminal</span>
         </a>
         <a href="assets/html/display.html" class="nav-item" target="_blank">
-          <span class="icon">&#128250;</span>
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"/><line x1="2" y1="20" x2="2.01" y2="20"/></svg></span>
           <span>Public Display</span>
         </a>
         <a href="assets/html/live-feed.html" class="nav-item">
-          <span class="icon">&#128225;</span>
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
           <span>Live Feed</span>
           <span class="nav-badge" id="nav-live-count">0</span>
         </a>
@@ -99,11 +99,11 @@
       <div class="nav-section">
         <div class="nav-section-title">Reports</div>
         <a href="assets/html/reports.html" class="nav-item">
-          <span class="icon">&#128200;</span>
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>
           <span>Analytics</span>
         </a>
         <a href="assets/html/settings.html" class="nav-item">
-          <span class="icon">&#9881;</span>
+          <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
           <span>Settings</span>
         </a>
       </div>
@@ -128,9 +128,9 @@
         <span class="subtitle">Real-time queue overview</span>
       </div>
       <div class="top-actions">
-        <button class="btn btn-icon" onclick="refreshData()" title="Refresh">&#128260;</button>
+        <button class="btn btn-icon" onclick="refreshData()" title="Refresh"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></button>
         <button class="btn btn-primary" onclick="openModal('create-ticket-modal')">
-          <span>&#10133;</span> New Ticket
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span> New Ticket
         </button>
       </div>
     </header>
@@ -140,51 +140,51 @@
       <!-- Stats Grid -->
       <div class="stats-grid">
         <div class="stat-card fade-in">
-          <div class="stat-icon blue">&#127915;</div>
+          <div class="stat-icon blue"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41L11 3H4v7l9.59 9.59a2 2 0 0 0 2.82 0l4.18-4.18a2 2 0 0 0 0-2.82Z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
           <div class="stat-content">
             <div class="stat-value" id="stat-total">0</div>
             <div class="stat-label">Total Tickets Today</div>
-            <div class="stat-change up">&#9650; 12% vs yesterday</div>
+            <div class="stat-change up">▲ 12% vs yesterday</div>
           </div>
         </div>
         <div class="stat-card fade-in">
-          <div class="stat-icon orange">&#9203;</div>
+          <div class="stat-icon orange"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
           <div class="stat-content">
             <div class="stat-value" id="stat-pending">0</div>
             <div class="stat-label">Waiting</div>
-            <div class="stat-change down">&#9660; 5 min avg wait</div>
+            <div class="stat-change down">▼ 5 min avg wait</div>
           </div>
         </div>
         <div class="stat-card fade-in">
-          <div class="stat-icon purple">&#9889;</div>
+          <div class="stat-icon purple"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
           <div class="stat-content">
             <div class="stat-value" id="stat-processing">0</div>
             <div class="stat-label">In Progress</div>
-            <div class="stat-change up">&#9650; 3 counters active</div>
+            <div class="stat-change up">▲ 3 counters active</div>
           </div>
         </div>
         <div class="stat-card fade-in">
-          <div class="stat-icon green">&#9989;</div>
+          <div class="stat-icon green"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
           <div class="stat-content">
             <div class="stat-value" id="stat-completed">0</div>
             <div class="stat-label">Completed</div>
-            <div class="stat-change up">&#9650; 94% success rate</div>
+            <div class="stat-change up">▲ 94% success rate</div>
           </div>
         </div>
         <div class="stat-card fade-in">
-          <div class="stat-icon red">&#10060;</div>
+          <div class="stat-icon red"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div>
           <div class="stat-content">
             <div class="stat-value" id="stat-cancelled">0</div>
             <div class="stat-label">Cancelled</div>
-            <div class="stat-change down">&#9660; 2% cancellation</div>
+            <div class="stat-change down">▼ 2% cancellation</div>
           </div>
         </div>
         <div class="stat-card fade-in">
-          <div class="stat-icon teal">&#128337;</div>
+          <div class="stat-icon teal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
           <div class="stat-content">
             <div class="stat-value" id="stat-avg-time">0m</div>
             <div class="stat-label">Avg. Service Time</div>
-            <div class="stat-change up">&#9650; Efficient</div>
+            <div class="stat-change up">▲ Efficient</div>
           </div>
         </div>
       </div>
@@ -192,7 +192,7 @@
       <!-- Queue Display -->
       <div class="card fade-in">
         <div class="card-header">
-          <div class="card-title">&#128187; Live Counter Status</div>
+          <div class="card-title">Live Counter Status</div>
           <button class="btn btn-sm btn-secondary" onclick="location.href='assets/html/counters.html'">Manage Counters</button>
         </div>
         <div class="card-body">
@@ -205,7 +205,7 @@
       <!-- Recent Tickets -->
       <div class="card fade-in">
         <div class="card-header">
-          <div class="card-title">&#128220; Recent Tickets</div>
+          <div class="card-title">Recent Tickets</div>
           <button class="btn btn-sm btn-secondary" onclick="location.href='assets/html/tickets.html'">View All</button>
         </div>
         <div class="card-body" style="padding:0;">
