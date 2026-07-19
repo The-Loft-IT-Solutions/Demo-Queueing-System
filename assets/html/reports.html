@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneQueue - Analytics</title>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <div class="logo-icon">Q</div>
+        <div class="logo-text">One<span>Queue</span></div>
+      </div>
+    </div>
+    <nav class="nav-menu">
+      <div class="nav-section">
+        <div class="nav-section-title">Main</div>
+        <a href="../../index.html" class="nav-item">
+          <span class="icon">&#128202;</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="tickets.html" class="nav-item">
+          <span class="icon">&#127915;</span>
+          <span>Tickets</span>
+          <span class="nav-badge" id="nav-total-tickets">0</span>
+        </a>
+        <a href="counters.html" class="nav-item">
+          <span class="icon">&#128187;</span>
+          <span>Counters</span>
+          <span class="nav-badge" id="nav-active-counters">0</span>
+        </a>
+      </div>
+      <div class="nav-section">
+        <div class="nav-section-title">Operations</div>
+        <a href="kiosk.html" class="nav-item" target="_blank">
+          <span class="icon">&#128241;</span>
+          <span>Kiosk Terminal</span>
+        </a>
+        <a href="display.html" class="nav-item" target="_blank">
+          <span class="icon">&#128250;</span>
+          <span>Public Display</span>
+        </a>
+        <a href="live-feed.html" class="nav-item">
+          <span class="icon">&#128225;</span>
+          <span>Live Feed</span>
+          <span class="nav-badge" id="nav-live-count">0</span>
+        </a>
+      </div>
+      <div class="nav-section">
+        <div class="nav-section-title">Reports</div>
+        <a href="reports.html" class="nav-item active">
+          <span class="icon">&#128200;</span>
+          <span>Analytics</span>
+        </a>
+        <a href="settings.html" class="nav-item">
+          <span class="icon">&#9881;</span>
+          <span>Settings</span>
+        </a>
+      </div>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-card">
+        <div class="user-avatar">A</div>
+        <div class="user-info">
+          <div class="user-name">Admin User</div>
+          <div class="user-role">System Administrator</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="top-bar">
+      <div class="page-title">
+        Analytics
+        <span class="subtitle">Performance insights & reports</span>
+      </div>
+      <div class="top-actions">
+        <button class="btn btn-secondary btn-sm">Today</button>
+        <button class="btn btn-icon" onclick="refreshData()" title="Refresh">&#128260;</button>
+      </div>
+    </header>
+
+    <div class="content-area">
+      <div class="stats-grid">
+        <div class="stat-card fade-in">
+          <div class="stat-icon blue">&#128200;</div>
+          <div class="stat-content">
+            <div class="stat-value" id="report-total">0</div>
+            <div class="stat-label">Total Tickets (Today)</div>
+          </div>
+        </div>
+        <div class="stat-card fade-in">
+          <div class="stat-icon green">&#9989;</div>
+          <div class="stat-content">
+            <div class="stat-value" id="report-completed">0</div>
+            <div class="stat-label">Completed</div>
+          </div>
+        </div>
+        <div class="stat-card fade-in">
+          <div class="stat-icon orange">&#9203;</div>
+          <div class="stat-content">
+            <div class="stat-value" id="report-avg-wait">0m</div>
+            <div class="stat-label">Average Wait Time</div>
+          </div>
+        </div>
+        <div class="stat-card fade-in">
+          <div class="stat-icon purple">&#9889;</div>
+          <div class="stat-content">
+            <div class="stat-value" id="report-avg-service">0m</div>
+            <div class="stat-label">Average Service Time</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card fade-in">
+        <div class="card-header">
+          <div class="card-title">Service Breakdown</div>
+        </div>
+        <div class="card-body">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Total</th>
+                <th>Completed</th>
+                <th>Cancelled</th>
+                <th>Avg Wait</th>
+                <th>Avg Service</th>
+                <th>Success Rate</th>
+              </tr>
+            </thead>
+            <tbody id="service-breakdown-body">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card fade-in">
+        <div class="card-header">
+          <div class="card-title">Counter Performance</div>
+        </div>
+        <div class="card-body">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Counter</th>
+                <th>Staff</th>
+                <th>Tickets Served</th>
+                <th>Avg Service Time</th>
+                <th>Efficiency</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="counter-performance-body">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/websocket.js"></script>
+  <script src="../js/reports.js"></script>
+
+  <div id="dcwPoweredBy" style="position:fixed;bottom:18px;right:18px;z-index:1000;background:rgba(15,23,42,0.85);color:#f1f5f9;font-size:11.5px;padding:7px 12px;border-radius:20px;letter-spacing:.2px;font-family:inherit;">Powered by <a href="https://theloftitsolutions.com" target="_blank" rel="noopener" style="color:#f1f5f9;">The Loft IT Solutions</a></div>
+</body>
+</html>

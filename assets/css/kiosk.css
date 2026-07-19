@@ -1,0 +1,101 @@
+/* ===== KIOSK FULL SCREEN ===== */
+.kiosk-page {
+  background: linear-gradient(135deg, #1a73e8 0%, #4285f4 50%, #34a853 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.kiosk-page .kiosk-header {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 0;
+  margin-bottom: 0;
+  padding: 50px 20px;
+}
+
+.kiosk-page .kiosk-header h1 {
+  font-size: 42px;
+}
+
+.kiosk-page .kiosk-header p {
+  font-size: 20px;
+}
+
+.kiosk-page .service-buttons {
+  padding: 40px 28px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.kiosk-page .service-btn {
+  padding: 40px 30px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.kiosk-page .service-btn .icon {
+  font-size: 56px;
+}
+
+.kiosk-page .service-btn .name {
+  font-size: 22px;
+}
+
+.kiosk-page .service-btn .desc {
+  font-size: 15px;
+}
+
+.kiosk-page .service-btn .wait-est {
+  font-size: 14px;
+  margin-top: 14px;
+}
+
+.kiosk-footer {
+  text-align: center;
+  padding: 30px;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
+
+.kiosk-footer .clock {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  font-family: 'SF Mono', monospace;
+  margin-bottom: 8px;
+}
+
+/* Ticket print overlay in kiosk */
+.ticket-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  padding: 20px;
+}
+
+.ticket-overlay.active {
+  display: flex;
+}
+
+.ticket-overlay .ticket-print {
+  animation: popIn 0.4s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .kiosk-page .kiosk-header h1 { font-size: 28px; }
+  .kiosk-page .kiosk-header p { font-size: 16px; }
+  .kiosk-page .service-btn { padding: 28px 20px; }
+  .kiosk-page .service-btn .icon { font-size: 40px; }
+  .kiosk-page .service-btn .name { font-size: 18px; }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneQueue - Live Feed</title>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <div class="logo-icon">Q</div>
+        <div class="logo-text">One<span>Queue</span></div>
+      </div>
+    </div>
+    <nav class="nav-menu">
+      <div class="nav-section">
+        <div class="nav-section-title">Main</div>
+        <a href="../../index.html" class="nav-item">
+          <span class="icon">&#128202;</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="tickets.html" class="nav-item">
+          <span class="icon">&#127915;</span>
+          <span>Tickets</span>
+          <span class="nav-badge" id="nav-total-tickets">0</span>
+        </a>
+        <a href="counters.html" class="nav-item">
+          <span class="icon">&#128187;</span>
+          <span>Counters</span>
+          <span class="nav-badge" id="nav-active-counters">0</span>
+        </a>
+      </div>
+      <div class="nav-section">
+        <div class="nav-section-title">Operations</div>
+        <a href="kiosk.html" class="nav-item" target="_blank">
+          <span class="icon">&#128241;</span>
+          <span>Kiosk Terminal</span>
+        </a>
+        <a href="display.html" class="nav-item" target="_blank">
+          <span class="icon">&#128250;</span>
+          <span>Public Display</span>
+        </a>
+        <a href="live-feed.html" class="nav-item active">
+          <span class="icon">&#128225;</span>
+          <span>Live Feed</span>
+          <span class="nav-badge" id="nav-live-count">0</span>
+        </a>
+      </div>
+      <div class="nav-section">
+        <div class="nav-section-title">Reports</div>
+        <a href="reports.html" class="nav-item">
+          <span class="icon">&#128200;</span>
+          <span>Analytics</span>
+        </a>
+        <a href="settings.html" class="nav-item">
+          <span class="icon">&#9881;</span>
+          <span>Settings</span>
+        </a>
+      </div>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-card">
+        <div class="user-avatar">A</div>
+        <div class="user-info">
+          <div class="user-name">Admin User</div>
+          <div class="user-role">System Administrator</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="top-bar">
+      <div class="page-title">
+        Live Feed
+        <span class="subtitle">Real-time system activity</span>
+      </div>
+      <div class="top-actions">
+        <button class="btn btn-icon" onclick="clearFeed()" title="Clear">&#128465;</button>
+        <button class="btn btn-icon" onclick="toggleAutoScroll()" id="autoscroll-btn" title="Auto-scroll">&#128315;</button>
+        <button class="btn btn-icon" onclick="refreshData()" title="Refresh">&#128260;</button>
+      </div>
+    </header>
+
+    <div class="content-area">
+      <div class="live-feed">
+        <div class="live-feed-header">
+          <h3><span class="live-dot"></span> Live Activity Stream</h3>
+          <span style="font-size:12px;opacity:0.7;">WebSocket Connected</span>
+        </div>
+        <div class="live-feed-body" id="live-feed-body">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/websocket.js"></script>
+  <script src="../js/live-feed.js"></script>
+
+  <div id="dcwPoweredBy" style="position:fixed;bottom:18px;right:18px;z-index:1000;background:rgba(15,23,42,0.85);color:#f1f5f9;font-size:11.5px;padding:7px 12px;border-radius:20px;letter-spacing:.2px;font-family:inherit;">Powered by <a href="https://theloftitsolutions.com" target="_blank" rel="noopener" style="color:#f1f5f9;">The Loft IT Solutions</a></div>
+</body>
+</html>
