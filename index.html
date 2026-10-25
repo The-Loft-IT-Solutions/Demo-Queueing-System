@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QueueFlow - Dashboard</title>
+  <title>Queueing System - Dashboard</title>
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
   <!-- ============ DEMO NAVIGATOR ============ -->
-  <div id="dcwNavigator" style="position:fixed;inset:0;background:linear-gradient(160deg,#0F172A,#1E293B);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;color:#fff;font-family:inherit;">
-    <div style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#38BDF8;margin-bottom:10px;">Interactive Demo</div>
-    <h1 style="font-size:34px;font-weight:700;margin-bottom:8px;text-align:center;">QueueFlow &mdash; Queueing System</h1>
+  <div id="dcwNavigator" style="position:fixed;inset:0;background:linear-gradient(160deg,#1f1a2e,#2e2440);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;color:#fff;font-family:inherit;">
+    <div style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#a78bfa;margin-bottom:10px;">Interactive Demo</div>
+    <h1 style="font-size:34px;font-weight:700;margin-bottom:8px;text-align:center;">Queueing System</h1>
     <p style="color:#CBD5E1;margin-bottom:36px;text-align:center;max-width:560px;">A queue management system with a self-service kiosk and public display for customers, plus a full admin dashboard for staff. Choose a view to begin.</p>
     <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;max-width:920px;">
-      <div onclick="dcwEnter('dashboard')" style="background:#fff;color:#0F172A;border-radius:14px;padding:24px;width:260px;cursor:pointer;transition:.2s;border:2px solid transparent;" onmouseover="this.style.borderColor='#38BDF8'" onmouseout="this.style.borderColor='transparent'">
-        <h3 style="font-size:18px;margin-bottom:8px;color:#0369A1;display:flex;align-items:center;gap:8px;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg> Admin Dashboard</h3>
+      <div onclick="dcwEnter('dashboard')" style="background:#fff;color:#1f1a2e;border-radius:14px;padding:24px;width:260px;cursor:pointer;transition:.2s;border:2px solid transparent;" onmouseover="this.style.borderColor='#a78bfa'" onmouseout="this.style.borderColor='transparent'">
+        <h3 style="font-size:18px;margin-bottom:8px;color:#5b21b6;display:flex;align-items:center;gap:8px;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg> Admin Dashboard</h3>
         <p style="font-size:13.5px;color:#64748B;">Staff-facing view: tickets, counters, live feed, analytics, and settings.</p>
       </div>
-      <div onclick="dcwEnter('kiosk')" style="background:#fff;color:#0F172A;border-radius:14px;padding:24px;width:260px;cursor:pointer;transition:.2s;border:2px solid transparent;" onmouseover="this.style.borderColor='#38BDF8'" onmouseout="this.style.borderColor='transparent'">
-        <h3 style="font-size:18px;margin-bottom:8px;color:#0369A1;display:flex;align-items:center;gap:8px;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg> Kiosk Terminal</h3>
+      <div onclick="dcwEnter('kiosk')" style="background:#fff;color:#1f1a2e;border-radius:14px;padding:24px;width:260px;cursor:pointer;transition:.2s;border:2px solid transparent;" onmouseover="this.style.borderColor='#a78bfa'" onmouseout="this.style.borderColor='transparent'">
+        <h3 style="font-size:18px;margin-bottom:8px;color:#5b21b6;display:flex;align-items:center;gap:8px;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg> Kiosk Terminal</h3>
         <p style="font-size:13.5px;color:#64748B;">What a customer sees at a self-service kiosk to take a ticket. Opens in a new tab (real kiosks are a separate device).</p>
       </div>
-      <div onclick="dcwEnter('display')" style="background:#fff;color:#0F172A;border-radius:14px;padding:24px;width:260px;cursor:pointer;transition:.2s;border:2px solid transparent;" onmouseover="this.style.borderColor='#38BDF8'" onmouseout="this.style.borderColor='transparent'">
-        <h3 style="font-size:18px;margin-bottom:8px;color:#0369A1;display:flex;align-items:center;gap:8px;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Public Display</h3>
+      <div onclick="dcwEnter('display')" style="background:#fff;color:#1f1a2e;border-radius:14px;padding:24px;width:260px;cursor:pointer;transition:.2s;border:2px solid transparent;" onmouseover="this.style.borderColor='#a78bfa'" onmouseout="this.style.borderColor='transparent'">
+        <h3 style="font-size:18px;margin-bottom:8px;color:#5b21b6;display:flex;align-items:center;gap:8px;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Public Display</h3>
         <p style="font-size:13.5px;color:#64748B;">The "Now Serving" screen customers see in the waiting area. Opens in a new tab (real displays run on a separate screen).</p>
       </div>
     </div>
@@ -30,8 +30,8 @@
   </div>
 
   <!-- ============ VIEW SWITCHER ============ -->
-  <div id="dcwSwitcher" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#0F172A;border-radius:40px;display:none;gap:4px;padding:5px;z-index:1000;box-shadow:0 8px 24px rgba(0,0,0,.35);font-family:inherit;">
-    <button onclick="document.getElementById('dcwNavigator').style.display='flex';document.getElementById('dcwSwitcher').style.display='none';" style="color:#38BDF8;padding:9px 16px;border-radius:30px;font-size:13px;font-weight:600;border:none;background:none;cursor:pointer;">&#8617; Menu</button>
+  <div id="dcwSwitcher" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#1f1a2e;border-radius:40px;display:none;gap:4px;padding:5px;z-index:1000;box-shadow:0 8px 24px rgba(0,0,0,.35);font-family:inherit;">
+    <button onclick="document.getElementById('dcwNavigator').style.display='flex';document.getElementById('dcwSwitcher').style.display='none';" style="color:#a78bfa;padding:9px 16px;border-radius:30px;font-size:13px;font-weight:600;border:none;background:none;cursor:pointer;">&#8617; Menu</button>
     <button onclick="window.open('assets/html/kiosk.html','_blank')" style="color:#E2E8F0;padding:9px 16px;border-radius:30px;font-size:13px;font-weight:600;border:none;background:none;cursor:pointer;">Kiosk Terminal</button>
     <button onclick="window.open('assets/html/display.html','_blank')" style="color:#E2E8F0;padding:9px 16px;border-radius:30px;font-size:13px;font-weight:600;border:none;background:none;cursor:pointer;">Public Display</button>
   </div>
